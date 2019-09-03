@@ -77,7 +77,8 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
             print(data3)
             let next = self.storyboard?.instantiateViewController(withIdentifier: "second") as! secondViewController
             next.retrivedImage = data3 as! UIImage
-            self.present(next, animated: true, completion: nil)
+            self.navigationController?.pushViewController(next, animated: true)
+           // self.present(next, animated: true, completion: nil)
         
             
          }
